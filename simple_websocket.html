@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>esp32 websocket</h1>
+
+<script>
+	const socket = new WebSocket("ws://robot.local");
+	socket.onopen = function(){
+		console.log("connected");
+		socket.send("hello esp32");
+		};
+	socket.onmessage = function (event){
+		console.log("esp32:", event.data);
+		};
+	socket.onerror = function(error) {
+    		console.log("WebSocket ERROR:", error);
+		};
+
+	socket.onclose = function() {
+    		console.log("WebSocket CLOSED");
+		};
+
+	
+	
+</script>
+</body>
+</html>
+
+		
+		 
