@@ -6,8 +6,8 @@ using namespace websockets;
 WebsocketsServer server;
 
 typedef char* cptr;
-cptr ssid = "narzo 50A";
-cptr password = "123456789";
+cptr ssid = "your_ssid";
+cptr password = "your_password";
 
 
 void setup() {
